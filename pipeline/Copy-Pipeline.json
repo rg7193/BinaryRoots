@@ -1,0 +1,7 @@
+{
+	"name": "Copy-Pipeline",
+	"properties": {
+		"description": "Copy data from csv to postgreSQL",
+		"annotations": []
+	}
+}
