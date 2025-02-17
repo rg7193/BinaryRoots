@@ -2,7 +2,7 @@
 	"name": "AzurePostgreSqlTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzurePostgreSql1",
+			"referenceName": "AzurePostgreSql2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,20 +10,32 @@
 		"schema": [
 			{
 				"name": "id",
-				"type": "integer",
+				"type": "bigint",
 				"precision": 0,
 				"scale": 0
 			},
 			{
-				"name": "metadata",
-				"type": "jsonb",
+				"name": "name",
+				"type": "character varying",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "email",
+				"type": "character varying",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "created_at",
+				"type": "timestamp without time zone",
 				"precision": 0,
 				"scale": 0
 			}
 		],
 		"typeProperties": {
 			"schema": "public",
-			"table": "insta"
+			"table": "users"
 		}
 	}
 }
