@@ -1,0 +1,37 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"url": "https://rgupta24.servicebus.windows.net/postgresqlevent/messages",
+					"body": {
+						"id": 1,
+						"name": "Sample Event",
+						"timestamp": "2025-02-16T22:47:36Z"
+					},
+					"authentication": {
+						"type": "MSI",
+						"resource": "1ffbaf8f-c1bb-48a9-870b-e9a70702df34"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
